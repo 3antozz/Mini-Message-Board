@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title><%- title %></title>
+</head>
+<body>
+    <%- include('navbar') %>
+    <ul>
+        <% messages.map((message, index) => {%>
+            <li>
+                <h2><%= message.user %></h2>
+                <h3><%= message.text %></h3>
+                <h3><%= message.added %></h3>
+                <a href="/details/<%= index%>">Details</a>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
