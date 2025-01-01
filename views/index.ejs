@@ -9,12 +9,12 @@
 <body>
     <%- include('navbar') %>
     <ul>
-        <% messages.map((message, index) => {%>
+        <% messages.map((message) => {%>
             <li>
-                <h2><%= message.user %></h2>
-                <h3><%= message.text %></h3>
-                <h3><%= message.added %></h3>
-                <a href="/details/<%= index%>">Details</a>
+                <h2><%= message.username %></h2>
+                <h3><%= message.message %></h3>
+                <h3><%= message.date_added %></h3>
+                <a href="/details/<%= message.id%>">Details</a>
             </li>
         <% }) %>
     </ul>
